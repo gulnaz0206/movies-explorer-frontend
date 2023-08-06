@@ -37,7 +37,7 @@
     width: 100%;
     border: none;
     border-radius: 3px;
-    background-color: black;
+    background-color: #2BE080;
     color: white;
     height: 44px;
     text-align: center;
@@ -57,14 +57,13 @@
 }
 .register__login-link {
     text-decoration: none;
-    color: black;
+    color: #2BE080;
     text-align: center;
     font-size: 14px;
     padding: 0 0 0 6px;
     cursor: pointer;
 }
 .register__input {
-    background: #F3C1F8;
     border: none;
     border-bottom: 1px solid #E8E8E8;
     color: black;
@@ -97,4 +96,7 @@
     .register__login-link {
         font-size: 12px;
     }
+}
+@media screen and (max-width: 800px) { 
+    
 }

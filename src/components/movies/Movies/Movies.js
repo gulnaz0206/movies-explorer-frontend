@@ -10,7 +10,7 @@ function Movies() {
     const [isPopupOpened, setIsPopupOpened] = useState(false);
 
     return (
-        <section className="section movies">
+        <section className="movies">
             <SearchForm onOpenPopup={() => setIsPopupOpened(true)} />
             <MoviesCardList />
             <Footer />

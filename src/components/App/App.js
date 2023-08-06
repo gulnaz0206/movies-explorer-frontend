@@ -26,8 +26,6 @@ function App() {
     }, []);
     return (
         <div className="page">
-            {/* { viewHeader && <Header isLogged={isLogged} />} */}
-            <main className="content">
                 {isLoading ? (
                     <Preloader />
                 ) : (
@@ -42,7 +40,6 @@ function App() {
                         <Route path="*" element={<Error setViewHeader={setViewHeader} />} />
                     </Routes>
                 )}
-            </main>
         </div>
     );
 }

@@ -1,5 +1,4 @@
 .techs {
-    background: #F3C1F8;
     /* margin: 0 30px; */
     padding: 0;
     min-height: 625px;
@@ -79,7 +78,7 @@
     border-radius: 10px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     .techs {
         padding: 90px 50 px;
     }
@@ -90,7 +89,7 @@
         margin-bottom: 22px;
     }
     .techs__text{
-        max-width: 319px;
+        max-width: 460px;
         font-size: 12px;
         line-height: 18px;
     }
@@ -99,7 +98,7 @@
     }
     .techs__technologies {
         display: flex;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
     }
     .techs__item {
         width: 84px;
@@ -109,6 +108,14 @@
     }
 }
 @media screen and (max-width: 400px) {
+    .techs {
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-top: 70px;
+    }
+    .techs__wrapper {
+        padding: 0 18px
+    }
     .techs__subtitle {
         font-size: 30px;
         line-height: normal;

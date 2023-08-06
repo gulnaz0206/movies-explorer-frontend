@@ -23,10 +23,22 @@ img {
     margin: 0 auto;
     color:black;
     font-size: 0;
-    background-color: #F3C1F8;
+    background-color: #FFFFFF;
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-style: normal;
     display: flex;
     flex-direction: column;
 }
+
+/* @media screen and (max-width: 768px) {
+    .page {
+        max-width: 768px;
+    }
+ }
+
+ @media screen and (max-width: 320px) {
+    .page {
+        max-width: 320px;
+    }
+ } */

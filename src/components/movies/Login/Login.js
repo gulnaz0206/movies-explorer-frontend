@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import './Login.css';
-import logo from '../../../images/logo.svg';
+import logo from '../../../images//header-logo1.svg';
 import { Link } from "react-router-dom";
 
 

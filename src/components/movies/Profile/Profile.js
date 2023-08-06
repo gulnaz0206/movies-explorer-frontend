@@ -1,9 +1,11 @@
-// import Header from '../../Header/Header';
+import React from 'react';
+import Navigation from "../Navigation/Navigation";
 import './Profile.css';
 
 function Profile() {
     return (
         <>
+            <Navigation />
             <section className='section profile'>
                 <h2 className='profile__title'>Привет, Гульназ!</h2>
                 <form className='profile__form'>

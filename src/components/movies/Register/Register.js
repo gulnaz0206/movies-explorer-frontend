@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from '../../../images/logo.svg';
+import logo from '../../../images/header-logo1.svg';
 
 import './Register.css';
 import { BASE_URL } from "../../../const";

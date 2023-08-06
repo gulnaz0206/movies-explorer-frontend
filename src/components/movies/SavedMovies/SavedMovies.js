@@ -1,14 +1,14 @@
-// import Header from '../../Header/Header.js';
-// import Footer from '../../Footer/Footer.js';
 import MoviesCardList from '../MoviesCardList/MoviesCardList.js';
 import SearchForm from '../SearchForm/SearchForm.js';
 import './SavedMovies.css';
+import Footer from '../../Footer/Footer';
 
 function SavedMovies() {
     return (
         <section className='section saved-movies'>
         <SearchForm />
         <MoviesCardList />
+        <Footer />
         </section>
     );
 }

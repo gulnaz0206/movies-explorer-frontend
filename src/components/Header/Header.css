@@ -42,10 +42,16 @@
     padding: 0;
     cursor: pointer;
 }
+.nav__button {
+    border: none;
+    background-color: transparent;
+    display: none;
+    cursor: pointer;
+}
 
 .header__login-button {
-    background: #000;
-    color: white;
+    background: #2BE080;
+    color: black;
     border-radius: 3px;
     border: none;
     padding: 0;
@@ -66,9 +72,24 @@
 }
 
 @media screen and (max-width: 768px) {
+    .header {
+        padding: 0 30px;
+    }
     .header__navigation {
         max-width: 70px;
         margin: 0;
+    }
+    .nav__button {
+        border: none;
+        background-color: transparent;
+        display: flex;
+        cursor: pointer;
+    }
+    .header__register-button {
+        display: none;
+    }
+    .header__login-button {
+        display: none;
     }
     .header__navigation-inactive {
         max-width: 175px;
@@ -83,5 +104,25 @@
     }
     .header__link-container-inactive {
         display: none;
+    }
+}
+@media screen and (max-width: 320px) {
+    .header {
+        padding: 0 14px;
+    }
+    .header__container {
+        max-width: 320px;
+    }
+    .header__login-button {
+        width: 54px;
+        height: 26px;
+        font-size: 10px;
+    }
+    .header__register-button {
+        width: 64px;
+        font-size: 10px;
+    }
+    .header__navigate {
+        max-width: 132px;
     }
 }

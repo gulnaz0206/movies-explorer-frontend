@@ -1,13 +1,9 @@
 import React from "react";
 import './Promo.css';
-import PromoLogo from '../../images/promo-logo.svg'
 function Promo({ scrollToSection }) {
     return (
         <section className="promo">
-            <div className="promo__wrapper">
                 <h2 className="promo__title">Учебный проект студента факультета Веб&#8209;разработки.</h2>
-                <img className="promo__logo" src={PromoLogo} alt="Логотип страницы" />
-            </div>
             <nav className="promo__navigation">
                 <ul className="promo__more">
                     <li className="promo__more-list">

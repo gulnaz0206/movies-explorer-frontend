@@ -1,16 +1,19 @@
 import React from "react";
 import './MoviesCard.css';
+import film from "../../../images/film.png";
 
-function MoviesCard(props) {
+function MoviesCard({ title, duration }) {
     return (
-      <div className="movies-card">
-        <img src={props.imageUrl} alt={props.title} className="movies-card__image" />
-        <button className={`movies-card__like ${props.isLiked ? 'movies-card__like_active' : ''}`} onClick={props.onLikeClick}>Сохранить</button>
-        <div className="movies-card__info">
-            <h2 className="movies-card__title">{props.title}</h2>
-            <p className="movies-card__duration">{props.duration}</p>
+      <li className="movie-card">
+        <div className="movie-card__container">
+          <div className="movie-card__information">
+          <h3 className="movie-card__title">{title}</h3>
+          <p className="movie-card__duration">{duration}</p>
         </div>
-      </div>  
-    );
+        <button type="button" className="movie-card__save" />
+      </div>
+      <img className="movie-card__picture" src={film} alt={`Фильм ${title}`} />
+      </li>
+  );
 }
 export default MoviesCard;

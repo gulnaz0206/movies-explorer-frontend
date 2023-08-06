@@ -1,4 +1,15 @@
 .main {
     max-width: 1280px;
-    background-color: #F3C1F8;
+    background-color: #FFFFFF;
 }
+@media screen and (max-width: 768px) {
+    .main {
+        max-width: 768px;
+    }
+ }
+
+ @media screen and (max-width: 320px) {
+    .main {
+        max-width: 320px;
+    }
+ }
