@@ -1,6 +1,6 @@
 import React from "react";
 import './Promo.css';
-function Promo({ scrollToSection }) {
+function Promo() {
     return (
         <section className="promo">
                 <h2 className="promo__title">Учебный проект студента факультета Веб&#8209;разработки.</h2>
