@@ -1,0 +1,191 @@
+.aboutme {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 108px 70px 0;
+}
+
+.aboutme__title {
+    border-bottom: 1px solid #000;
+    font-size: 22px;
+    font-weight: 400px;
+    line-height: 26.63px;
+    letter-spacing: -0.88px;
+    margin: 0;
+    padding-bottom: 23px;
+    text-align: start;
+}
+
+.aboutme__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 66px;
+    text-align: center;
+}
+
+.aboutme__profile {
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutme__profile-photo {
+    width: 270px;
+}
+
+.aboutme__name {
+    font-size: 40px;
+    font-weight: 400px;
+    line-height: 58px;
+    margin: 0;
+    letter-spacing: -1.6px;
+}
+
+.aboutme__profession {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 18px 0 0;
+    letter-spacing: -.5px;
+}
+
+.aboutme__text {
+    max-width: 600px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 26px 10px 26px 0;
+    padding: 0;
+}
+
+.aboutme__link {
+    margin-top: auto;
+    max-width: 50px;
+    color: #000;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.aboutme__link:hover {
+    opacity: .7;
+}
+
+.aboutme__photo {
+    width: 270px;
+    height: 327px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 768px) {
+    .aboutme {
+        padding: 45px 50px 0;
+    }
+
+    .aboutme__container {
+        margin-top: 66px;
+    }
+
+    .section__title {
+        padding: 0 0 23px 0;
+    }
+
+    .aboutme__name {
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -1.6px;
+        font-weight: 400;
+    }
+
+    .aboutme__photo {
+        width: 255px;
+        height: 307px;
+    }
+
+    .aboutme__profession {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .aboutme__text {
+        font-size: 12px;
+        line-height: 18px;
+        /* margin-bottom: 87px; */
+    }
+
+    .aboutme__profile-photo {
+        width: 255px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .aboutme {
+        padding: 80px 30px 0;
+    }
+
+    .aboutme__container {
+        align-items: center;
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin-top: 60px;
+    }
+
+    .aboutme__name {
+        margin-top: 40px;
+    }
+
+    .aboutme__text {
+        margin-top: 40px;
+    }
+
+    .aboutme__profile-photo {
+        width: 100%;
+    }
+
+    .aboutme__photo {
+        width: 270px;
+        height: 327px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .aboutme {
+        padding: 112px 14px 0;
+    }
+
+    .aboutme__container {
+        margin-top: 61px;
+    }
+
+    .aboutme__title {
+        padding: 0 0 26px 0;
+        font-size: 18px;
+        line-height: 21.78px;
+    }
+
+    .aboutme__name {
+        margin-top: 35px;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 36.31px;
+        letter-spacing: -1.1px;
+    }
+
+    .aboutme__profession {
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: -.2px;
+        margin: 20px 0 0;
+        font-weight: 500px
+        ;
+    }
+    .aboutme__text {
+        margin: 22px 0 80px;
+        width: 282px;
+        font-size: 11px;
+        line-height: 16px;
+    }
+}

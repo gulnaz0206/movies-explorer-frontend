@@ -1,0 +1,116 @@
+.portfolio {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 100px 70px 120px;
+}
+
+.portfolio__title {
+    margin: 0;
+    color: #A0A0A0;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-bottom: 45px;
+}
+
+.portfolio__container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+}
+
+.portfolio__lists:not(:last-child) {
+    border-bottom: 1 solid #E8E8E8;
+}
+
+.portfolio__list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    align-items: center;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: -0.04em;
+}
+
+.portfolio__list:not(:last-of-type) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.portfolio__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.portfolio__button {
+    padding: 0;
+    width: 29px;
+    height: 60px;
+    background-color: transparent;
+    background-image: url(../../images/button-arrow.svg);
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .portfolio {
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 70px;
+    }
+    .portfolio__title {
+        padding: 0;
+    }
+
+    .portfolio__list {
+        letter-spacing: -1.2px;
+        font-size: 28px;
+    }
+    .portfolio__button {
+        background-image: url(../../images/button-arrow-middle.svg);
+        width: 27px;
+        height: 60px;
+    }
+    .portfolio__item {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .portfolio {
+        min-width: 260px;
+        padding: 70px 14px 52px;
+    }
+
+    .portfolio__title {
+        padding: 0;
+        font-size: 14px;
+    }
+
+    .portfolio__button {
+        background-image: url(../../images/button-arrow-small.svg);
+        width: 12px;
+        height: 22px;
+        margin: 0;
+    }
+
+    .portfolio__item {
+        font-size: 18px;
+    }
+}

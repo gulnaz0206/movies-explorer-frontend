@@ -1,0 +1,118 @@
+.profile {
+    padding-top: 74px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile__title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0 auto 122px;
+    text-align: center;
+}
+
+.profile__form {
+    max-width: 410px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile__form-fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 205px;
+    padding: 0;
+    border: none;
+}
+.profile__form-fieldset:last-child {
+    margin-bottom: 0;
+}
+.profile__container {
+    max-width: 410px;
+    min-height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    /* margin-bottom: 16px;
+    padding-bottom: 16px; */
+    /* padding-top: 3px; */
+}
+.profile__container:last-of-type {
+    border: none;
+    margin-bottom: 0;
+}
+.profile__label {
+    font-size: 11px;
+    font-weight: 500;
+    width: 141px;
+    display: flex;
+    align-items: center;
+}
+.profile__input {
+    width: 75%;
+    text-align: right;
+    font-size: 11px;
+    font-weight: 400px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    color:black
+}
+.profile__button {
+    color: black;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    background-color: transparent;
+    padding-top: 20px;
+}
+.profile__button-exit {
+    color: #FF4062;
+    text-decoration: none;
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+    max-width: 410px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+@media screen and (max-width: 800px) {
+    .profile {
+        padding-top: 240px;
+    }
+    .profile__welcome {
+        margin-bottom: 96px;
+    }
+    .profile__form-fieldset {
+        margin-bottom: 195px;
+    }
+    .profile__title {
+        margin: 0 auto 100px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .profile {
+        padding-top: 144px;
+    }
+    .profile__welcome {
+        margin-bottom: 80px;
+    }
+    .profile__form-fieldset {
+        margin-bottom: 365px;
+    }
+    .profile__form {
+        max-width: 260px;
+    }
+    .profile__button {
+        font-size: 12px;
+        margin-bottom: 40px;
+    }
+}
