@@ -3,18 +3,23 @@ import SearchForm from '../SearchForm/SearchForm.js';
 import './SavedMovies.css';
 import Footer from '../../Footer/Footer';
 import MovieHeader from '../../MovieHeader/MovieHeader.js';
+import Popup from "../../Popup/Popup.js";
+import { useState } from 'react';
+
 
 function SavedMovies() {
+    const [isPopupOpened, setIsPopupOpened] = useState(false);
     return (
         <>
-        <MovieHeader />
-        <main>
-        <SearchForm />
-        <section className='saved-movies'>
-        <MoviesCardList />
-        </section>
-        </main>
-        <Footer />
+            <MovieHeader onBurgerClick={() => setIsPopupOpened(true)} />
+            <main>
+                <SearchForm />
+                <section className='saved-movies'>
+                    <MoviesCardList />
+                </section>
+            </main>
+            <Footer />
+            <Popup isPopupOpened={isPopupOpened} onClosePopup={() => setIsPopupOpened(false)} />
         </>
     );
 }

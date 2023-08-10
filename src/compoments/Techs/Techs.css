@@ -62,20 +62,22 @@
 
 @media screen and (max-width: 768px) {
     .techs {
-        padding: 130px 50px;
+        padding: 93px 50px;
     }
 
     .techs__container {
-        margin-top: 80px;
+        margin-top: 76px;
 
     }
 
     .techs__item {
         width: 84px;
-        height: 36px;
+        /* height: 36px; */
         font-size: 12px;
         line-height: 15px;
+        box-sizing: border-box;
     }
+
     .techs__title {
         font-size: 22px;
         line-height: 22px;
@@ -93,9 +95,10 @@
         font-size: 11px;
         line-height: 16px;
         letter-spacing: -0.44px;
+        margin: 22px auto 0 auto;
     }
 
-     .techs__technologies {
+    .techs__technologies {
         grid-template-columns: repeat(7, 84px);
         margin: 83px 0 0 0;
     }
@@ -103,10 +106,24 @@
 
 @media screen and (max-width: 320px) {
     .techs {
-        padding: 25px 18px;
+        padding: 67px 18px;
     }
+
+    .techs__title {
+        font-size: 18px;
+    }
+
+    .techs__container {
+        margin-top: 60px;
+    }
+
     .techs__technologies {
         grid-template-columns: repeat(2, 84px);
         margin: 50px auto 0 auto;
+        box-sizing: border-box;
+    }
+
+    .techs__subtitle {
+        font-size: 30px;
     }
 }

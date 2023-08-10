@@ -1,6 +1,7 @@
 import React from 'react';
 import MovieHeader from '../../MovieHeader/MovieHeader';
 import './Profile.css';
+import { Link } from 'react-router-dom';
 
 function Profile() {
     return (
@@ -22,7 +23,7 @@ function Profile() {
                     </fieldset>
                     <button className='profile__button' type='submit' title='Редактировать'>Редактировать</button>
                 </form>
-                <button className='profile__button-exit' type='submit' title='Выйти из аккаунта'>Выйти из аккаунта</button>
+                <Link to="/" className='profile__button-exit' type='submit' title='Выйти из аккаунта'>Выйти из аккаунта</Link>
             </section>
        </main>
         </>

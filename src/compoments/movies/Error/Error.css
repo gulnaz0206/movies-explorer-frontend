@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
 align-items: center;
-    padding: 246px 0 60px;
+    padding: 262px 0 60px;
 }
 .error__title {
     width: 400px;
@@ -52,6 +52,7 @@ align-items: center;
         font-size: 80px;
         font-weight: 400;
         line-height: 97px;
+        padding-bottom: 10px;
     }
     .error__text {
         width: 200px;

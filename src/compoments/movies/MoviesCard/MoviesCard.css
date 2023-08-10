@@ -57,8 +57,13 @@
 
 }
 @media screen and (max-width: 800px) {
+    .movie-card {
+        max-width: 339px;
+        margin: 0;
+    }
     .movie-card__picture {
-        margin-bottom: 25px;
+        margin-bottom: 0;
+        max-width: 339px;
     }
 }
 @media screen and (max-width:400px) {
@@ -68,9 +73,14 @@
         min-height: 199px;
     }
     .movie-card__picture {
-        margin-bottom: 16px;
+        max-width: 301px;
+        height: 168px;
+        margin-bottom: 10px;
     }
     .movie-card__title {
-        font-size: 12px;
+        font-size: 15px;
+    }
+    .movie-card__container {
+        margin-bottom: 9px;
     }
 }

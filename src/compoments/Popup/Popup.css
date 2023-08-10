@@ -110,12 +110,14 @@
 @media (max-width: 520px) {
     .popup__container {
         width: 100%;
+        box-sizing: border-box;
     }
     .popup__content {
         margin-top: 144px;
     }
     .popup__link {
         margin-bottom: 24px;
+        color: #000;
     }
     .popup__link_active {
         padding-bottom: 7px;

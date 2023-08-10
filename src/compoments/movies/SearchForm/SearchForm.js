@@ -9,11 +9,14 @@ function SearchForm({currentUser, onOpenPopup}) {
     return (
         <section className="search__container">
         <form className="search-form">
+            <div className="search__input">
             <img className="search__find" src={finfIcon} alt="Лупа" />
             <input className="search-form__input" type="text" placeholder="Фильм" />
             <button className="search-form__button"/>
+            </div>
+            <FilterCheckbox />
         </form>
-        <FilterCheckbox />
+        
         </section>
     );
 }

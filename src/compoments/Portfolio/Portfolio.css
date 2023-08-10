@@ -11,6 +11,7 @@
     line-height: 20px;
     font-weight: 400;
     margin-bottom: 45px;
+    text-align: start;
 }
 
 .portfolio__container {
@@ -72,6 +73,10 @@
         padding-left: 50px;
         padding-right: 50px;
         padding-bottom: 70px;
+        padding-top: 91px;
+    }
+    .portfolio__container {
+        gap: 0;
     }
     .portfolio__title {
         padding: 0;
@@ -88,7 +93,7 @@
     }
     .portfolio__item {
         font-size: 28px;
-        margin-bottom: 25px;
+        margin-bottom: 29px;
     }
 }
 
@@ -101,6 +106,7 @@
     .portfolio__title {
         padding: 0;
         font-size: 14px;
+        margin-bottom: 32px;
     }
 
     .portfolio__button {
@@ -112,5 +118,9 @@
 
     .portfolio__item {
         font-size: 18px;
+        margin: 0;
+    }
+    .portfolio__container {
+        gap: 15px;
     }
 }

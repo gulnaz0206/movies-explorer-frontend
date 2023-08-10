@@ -6,11 +6,12 @@ import account from '.././../images/account.svg';
 
 function MovieHeader({ onBurgerClick }) {
     return (
-        <header className="movie-header"> 
+        <header className="movie-header">
+            <nav className="movie-header__container">
         <Link to='/' className="movie-header__logo-link">
                     <img className="movie-header__logo" src={logo} alt="Логотип страницы" /> 
                 </Link>
-            <nav className="movie-header__container">
+            
 
                 <NavLink to='/movies' className={({isActive}) => `movie-header__nav-link ${isActive ? 'movie-header__nav-link_active' : ''}`}>Фильмы</NavLink>
                 <NavLink to='/saved-movies' className={({isActive}) => `movie-header__nav-link ${isActive ? 'movie-header__nav-link_active' : ''}`}>Сохраненные фильмы</NavLink>

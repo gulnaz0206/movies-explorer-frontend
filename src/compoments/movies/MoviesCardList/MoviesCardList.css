@@ -18,12 +18,14 @@
 
 @media screen and (max-width: 800px) {
     .movies-list__item {
-        max-width: 300px;
+        gap: 25px;
+        justify-content: space-between;
     }
 }
 @media screen and (max-width: 440px) {
     .movies-list__item {
-        padding-top: 40px;
-        padding-bottom: 65px
+        padding-top: 43px;
+        padding-bottom: 56px;
+        gap: 5px;
     }
 }

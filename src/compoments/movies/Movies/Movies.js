@@ -1,7 +1,6 @@
 import React from "react";
 import SearchForm from '../SearchForm/SearchForm.js';
 import MoviesCardList from '../MoviesCardList/MoviesCardList.js';
-import './Movies.css';
 import Footer from "../../Footer/Footer.js";
 import Popup from "../../Popup/Popup.js";
 import { useState } from "react";
