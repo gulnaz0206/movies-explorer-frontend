@@ -64,6 +64,10 @@
     .movie-card__picture {
         margin-bottom: 0;
         max-width: 339px;
+        height: 186px;
+    }
+    .movies-list__item {
+        padding: 189px 0 30px;
     }
 }
 @media screen and (max-width:400px) {

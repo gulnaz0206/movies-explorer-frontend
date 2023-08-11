@@ -104,7 +104,16 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 650px) {
+
+    .techs__technologies {
+        grid-template-columns: repeat(2, 84px);
+        margin: 50px auto 0 auto;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 440px) {
     .techs {
         padding: 67px 18px;
     }
