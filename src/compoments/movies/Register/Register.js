@@ -56,7 +56,7 @@ function Register() {
                     id="email"
                     name="email"
                     className={`form__input ${errors.email === undefined ? '' : errors.email === '' ? "form__input_true" : "form__input_false"}`}
-                    placeholder="E-mail"
+                    placeholder="pochta@yandex.ru"
                     minLength='2'
                     maxLength='30'
                     value={values.email || ""}

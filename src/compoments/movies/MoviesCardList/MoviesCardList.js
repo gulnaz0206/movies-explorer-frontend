@@ -22,6 +22,51 @@ function MoviesCardList(props) {
                     duration='1ч 47м'
                     picture={film}
                 />
+                                <MoviesCard
+                    title='33 слова о дизайне'
+                    duration='1ч 47м'
+                    picture={film}
+                />
+                <MoviesCard
+                    title='33 слова о дизайне'
+                    duration='1ч 47м'
+                    picture={film}
+                />
+                <MoviesCard
+                    title='33 слова о дизайне'
+                    duration='1ч 47м'
+                    picture={film}
+                />
+               { /*                  <MoviesCard
+                    title='33 слова о дизайне'
+                    duration='1ч 47м'
+                    picture={film}
+                />
+                 <MoviesCard
+                    title='33 слова о дизайне'
+                    duration='1ч 47м'
+                    picture={film}
+                />
+              <MoviesCard
+                    title='33 слова о дизайне'
+                    duration='1ч 47м'
+                    picture={film}
+                />
+                                <MoviesCard
+                    title='33 слова о дизайне'
+                    duration='1ч 47м'
+                    picture={film}
+                />
+                <MoviesCard
+                    title='33 слова о дизайне'
+                    duration='1ч 47м'
+                    picture={film}
+                />
+                <MoviesCard
+                    title='33 слова о дизайне'
+                    duration='1ч 47м'
+                    picture={film}
+                /> */}
             </ul>
         </>
     );

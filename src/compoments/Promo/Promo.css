@@ -58,6 +58,9 @@
     transition: .3s ease;
     cursor: pointer;
 }
+.project__button:hover {
+    opacity: .7;
+}
 
 .promo__button {
     text-decoration: none;
@@ -87,7 +90,7 @@
     .promo__title {
         max-width: 680px;
         line-height: 52px;
-        letter-spacing: 1.6px;
+        letter-spacing: -1.6px;
         font-size: 40px;
         margin-top: 370px;
         margin-bottom: 314px;

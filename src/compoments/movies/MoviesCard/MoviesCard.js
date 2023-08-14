@@ -7,7 +7,7 @@ function MoviesCard({ title, duration }) {
       <li className="movie-card">
         <div className="movie-card__container">
           <div className="movie-card__information">
-          <h3 className="movie-card__title">{title}</h3>
+          <h2 className="movie-card__title">{title}</h2>
           <p className="movie-card__duration">{duration}</p>
         </div>
         <button type="button" className="movie-card__save" />

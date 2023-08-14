@@ -11,8 +11,8 @@ function SearchForm({currentUser, onOpenPopup}) {
         <form className="search-form">
             <div className="search__input">
             <img className="search__find" src={finfIcon} alt="Лупа" />
-            <input className="search-form__input" type="text" placeholder="Фильм" />
-            <button className="search-form__button"/>
+            <input className="search-form__input" type="text" placeholder="Фильм" required />
+            <button className="search-form__button" type="submit" />
             </div>
             <FilterCheckbox />
         </form>

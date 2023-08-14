@@ -12,11 +12,11 @@ function Popup({ isPopupOpened, onClosePopup, isActive }) {
             <div className="popup__container">
                 <button onClick={onClosePopup} className='popup__close' aria-label='закрыть попап' type='button' />
                 <nav className='popup__content'>
-                    <div className='popup__list'>
+                    <nav className='popup__list'>
                         <NavLink to='/' onClick={onClosePopup} className={`popup__link ${currentLocation === '' ? "popup__link_active" : ""}`}>Главная</NavLink>
                         <NavLink to='/movies' onClick={onClosePopup} className={`popup__link ${currentLocation === 'movies' ? "popup__link_active" : ""}`}>Фильмы</NavLink>
                         <NavLink to='/saved-movies' onClick={onClosePopup} className={`popup__link ${currentLocation === 'saved-movies' ? "popup__link_active" : ""}`}>Сохраненные фильмы</NavLink>
-                    </div>
+                    </nav>
                     <Link to="/profile" onClick={onClosePopup} className='popup__account'>Аккаунт</Link>
                 </nav>
             </div>

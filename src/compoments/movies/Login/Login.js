@@ -56,7 +56,7 @@ function Login() {
                     id="password"
                     name="password"
                     className={`form__input ${errors.password === undefined ? '' : errors.password === '' ? "form__input_true" : "form__input_false"}`}
-                    placeholder="Пароль"
+                    placeholder=""
                     minLength='8'
                     maxLength='30'
                     value={values.password || ""}

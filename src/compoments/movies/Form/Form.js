@@ -5,14 +5,14 @@ import logo from '../../../images/logo.svg';
 
 function Form({ isValid, title, name, message, textButton, route, subtitle, go, children, onFormSubmit }) {
     const formMessageClassName = `form__message ${isValid ? "form__message_error" : "form__message_active"}`;
-    const formButtonClassName = `form__button ${isValid ? "form__button_saved" : "form__button_disabled"}`;
+    const formButtonClassName = `form__button register__button ${isValid ? "form__button_saved" : "form__button_disabled"}`;
     return (
         <main>
             <section className="form">
                 <Link to="/">
                     <img className="form__logo" src={logo} alt="Логотип страницы" />
                 </Link>
-                <h2 className="form__title">{title}</h2>
+                <h1 className="form__title">{title}</h1>
                 <form className="form__autoform" name={`form-${name}`} onSubmit={onFormSubmit}>
                     <div>
                         <fieldset className="form__fieldset">{children}</fieldset>

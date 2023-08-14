@@ -2,7 +2,6 @@ import React from "react";
 import { Link, NavLink } from 'react-router-dom';
 import './MovieHeader.css';
 import logo from '../../images/logo.svg';
-import account from '.././../images/account.svg';
 
 function MovieHeader({ onBurgerClick }) {
     return (
@@ -17,7 +16,7 @@ function MovieHeader({ onBurgerClick }) {
                 <NavLink to='/saved-movies' className={({isActive}) => `movie-header__nav-link ${isActive ? 'movie-header__nav-link_active' : ''}`}>Сохраненные фильмы</NavLink>
             </nav>
             <Link to='/profile' className="movie-header__nav-account-pc">Аккаунт</Link>
-            <button className="movie-header__nav-account-mob" aria-label="open menu" onClick={onBurgerClick}></button>
+            <button type="button" className="movie-header__nav-account-mob" aria-label="открыть меню" onClick={onBurgerClick}></button>
         </header>
     );
 }

@@ -33,7 +33,7 @@
 }
 
 .aboutme__name {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 400px;
     line-height: 58px;
     margin: 0;
@@ -44,7 +44,7 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 20px;
-    margin: 18px 0 0;
+    margin: 18px 0 26px;
     letter-spacing: -.5px;
 }
 
@@ -55,10 +55,11 @@
     line-height: 22px;
     /* margin: 26px 10px 26px 0; */
     padding: 0;
+    margin: 0;
 }
 
 .aboutme__link {
-    margin-top: auto;
+    margin-top: 99px;
     max-width: 50px;
     color: #000;
     font-weight: 500;
@@ -107,17 +108,21 @@
     .aboutme__profession {
         font-size: 12px;
         line-height: 18px;
-        margin: 0;
+        margin: 16px 0 20px;
     }
 
     .aboutme__text {
         font-size: 12px;
         line-height: 18px;
+        width: 364px;
         /* margin-bottom: 87px; */
     }
 
     .aboutme__profile-photo {
         width: 255px;
+    }
+    .aboutme__link {
+        margin-top: 87px;
     }
 }
 
@@ -157,9 +162,9 @@
         padding: 63px 14px 0;
     }
 
-    .aboutme__container {
+    /* .aboutme__container {
         margin-top: 61px;
-    }
+    } */
 
     .aboutme__title {
         padding: 0 0 26px 0;
@@ -182,7 +187,7 @@
         ;
     }
     .aboutme__text {
-        margin: 3px 0 90px;
+        margin: 3px 0 0;
         width: 282px;
         font-size: 11px;
         line-height: 16px;
@@ -190,5 +195,8 @@
     .aboutme__photo {
         width: 292px;
         height: 350px;
+    }
+    .aboutme__link {
+        margin-top: 40px;
     }
 }

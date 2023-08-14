@@ -7,18 +7,18 @@ import { useState } from "react";
 import MovieHeader from '../../MovieHeader/MovieHeader';
 import ButtonMore from '../../ButtonMore/ButtonMore';
 
-function Movies({onBurgerClick}) {
+function Movies({ onBurgerClick }) {
     const [isPopupOpened, setIsPopupOpened] = useState(false);
 
     return (
         <>
-        <MovieHeader onBurgerClick={() => setIsPopupOpened(true)} />
-        <main>
-        <section className="movies">
-            <SearchForm />
-            <MoviesCardList />
-            <ButtonMore />
-            </section>
+            <MovieHeader onBurgerClick={() => setIsPopupOpened(true)} />
+            <main>
+                <SearchForm />
+                <section className="movies">
+                    <MoviesCardList />
+                    <ButtonMore />
+                </section>
             </main>
             <Footer />
             <Popup isPopupOpened={isPopupOpened} onClosePopup={() => setIsPopupOpened(false)} />

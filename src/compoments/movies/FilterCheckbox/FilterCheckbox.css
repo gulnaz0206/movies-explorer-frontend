@@ -3,11 +3,11 @@
     /* margin-bottom: 118px; */
     justify-content: center;
     align-items: center;
-    /* padding: 30px 0 39px ; */
+    padding-right: 39px;
 }
 .checkbox__description {
     color: #000;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 400;
     line-height: 18px;
     margin-left: 12px;
@@ -43,13 +43,11 @@
 
 @media screen and (max-width: 800px) {
     .checkbox {
-        /* margin-bottom: 132px; */
+        padding-right: 20px;
     }
 }
-@media screen and (max-widt:400px) {
-    .checkbox {
-        flex-direction: column;
-    }
+@media screen and (max-width:400px) {
+
     .checkbox__input {
         height: 19px;
     }

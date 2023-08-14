@@ -104,6 +104,16 @@
     }
 }
 
+@media screen and (max-width: 760px) {
+
+    .techs__technologies {
+        grid-template-columns: repeat(4, 84px);
+        margin: 50px auto 0 auto;
+        box-sizing: border-box;
+    }
+}
+
+
 @media screen and (max-width: 650px) {
 
     .techs__technologies {
