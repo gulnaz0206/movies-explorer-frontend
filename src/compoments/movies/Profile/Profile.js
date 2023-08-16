@@ -13,28 +13,30 @@ function Profile({ onBurgerClick }) {
 
     return (
         <>
-            <MovieHeader onBurgerClick={() => setIsPopupOpened(true)}/>
+            <MovieHeader onBurgerClick={() => setIsPopupOpened(true)} />
             <main>
                 <section className='profile'>
-                    <h1 className='profile__title'>Привет, Гульназ!</h1>
+                    <h1 className='profile__title'>Привет, Виталий!</h1>
                     <form className='profile__form'>
                         <fieldset className='profile__form-fieldset'>
-                            <label className='profile__label' htmlFor='name'>Имя
+                            <div className='profile__item'>
+                                <label className='profile__label' htmlFor='name'>Имя</label>
                                 <input
                                     className='profile__input'
                                     id='name'
                                     name='name'
                                     type='text'
-                                    value='Гульназ'
+                                    value='Виталий'
                                     placeholder='Имя'
                                     minLength='2'
                                     maxLength='30'
                                     onChange={onChange}
                                     required
                                 />
-                            </label>
 
-                            <label className='profile__label' htmlFor='name'>Email
+                            </div>
+                            <div className='profile__item'>
+                                <label className='profile__label' htmlFor='name'>E-mail</label>
                                 <input
                                     className='profile__input'
                                     id='email' name='email'
@@ -44,12 +46,13 @@ function Profile({ onBurgerClick }) {
                                     onChange={onChange}
                                     required
                                 />
-                            </label>
+
+                            </div>
                         </fieldset>
                         <button className='profile__button' type='button'>
                             Редактировать
                         </button>
-                        <Link to="/" className='profile__button-exit' type='submit'>
+                        <Link to="/" className='profile__button-exit'>
                             Выйти из аккаунта
                         </Link>
                         {/* <button type='submit' className={profileButton}>

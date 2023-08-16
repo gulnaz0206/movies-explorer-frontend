@@ -1,10 +1,9 @@
 .checkbox {
     display: flex;
-    /* margin-bottom: 118px; */
     justify-content: center;
     align-items: center;
     padding-right: 33px;
-    /* padding-right: 39px; */
+    cursor: pointer;
 }
 .checkbox__description {
     color: #000;

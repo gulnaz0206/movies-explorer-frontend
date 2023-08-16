@@ -90,13 +90,13 @@
     .movie-card__picture {
         max-width: 301px;
         height: 168px;
-        margin-bottom: 12px;
+        margin-bottom: 0;
     }
     .movie-card__title {
         font-size: 15px;
     }
     .movie-card__container {
-        margin-bottom: 9px;
+        margin-bottom: 11px;
     }
     .movie-card__duration {
         margin-top: 8px;

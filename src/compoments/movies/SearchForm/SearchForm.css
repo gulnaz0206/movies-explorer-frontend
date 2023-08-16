@@ -95,6 +95,7 @@
     }
     .search__input {
         display: flex;
+        box-sizing: border-box;
     }
     .search-form {
         max-width: 708px;
@@ -145,7 +146,7 @@
         align-items: center;
         padding: 0;
         padding-right: 19px;
-        gap: 46px;
+        gap: 0;
         width: initial;
     }
     .search-form__input {

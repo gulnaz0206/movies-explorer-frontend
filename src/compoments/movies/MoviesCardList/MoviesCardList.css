@@ -27,8 +27,8 @@
 }
 @media screen and (max-width: 440px) {
     .movies__item {
-        padding-top: 43px;
+        padding-top: 52px;
         padding-bottom: 56px;
-        gap: 5px;
+        gap: 17px;
     }
 }

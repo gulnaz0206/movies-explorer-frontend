@@ -5,7 +5,7 @@ import logo from '../../../images/logo.svg';
 
 function Form({ isValid, title, name, message, textButton, route, subtitle, go, children, onFormSubmit }) {
     const formMessageClassName = `form__message ${isValid ? "form__message_error" : "form__message_active"}`;
-    const formButtonClassName = `form__button register-button ${isValid ? "form__button_saved" : "form__button_disabled"}`;
+    const formButtonClassName = `form__button ${isValid ? "form__button_saved" : "form__button_disabled"}`;
     return (
         <main>
             <section className="form">
@@ -14,7 +14,7 @@ function Form({ isValid, title, name, message, textButton, route, subtitle, go, 
                 </Link>
                 <h1 className="form__title">{title}</h1>
                 <form className="form__autoform" name={`form-${name}`} onSubmit={onFormSubmit}>
-                    <div>
+                    <div className="form__container">
                         <fieldset className="form__fieldset">{children}</fieldset>
                     </div>
                     <div>
