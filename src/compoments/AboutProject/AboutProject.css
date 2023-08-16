@@ -190,6 +190,7 @@
 
     .about-project__information:first-child {
         margin-bottom: 56px;
+        margin-right: 0;
     }
 
     .about-project__text {

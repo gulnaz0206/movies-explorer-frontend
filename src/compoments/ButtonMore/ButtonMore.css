@@ -18,9 +18,9 @@
     opacity: .7;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .movies__button {
-        margin-top: 15px;
+        margin-top: 50px;
     }
 }
 

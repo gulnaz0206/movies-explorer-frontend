@@ -3,7 +3,8 @@
     /* margin-bottom: 118px; */
     justify-content: center;
     align-items: center;
-    padding-right: 39px;
+    padding-right: 33px;
+    /* padding-right: 39px; */
 }
 .checkbox__description {
     color: #000;

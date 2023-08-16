@@ -38,6 +38,7 @@
     line-height: 18px;
     margin: 0;
     text-align: start;
+    margin-top: 7px;
 }
 .movie-card__picture {
     max-width: 364px;
@@ -61,15 +62,23 @@
 @media screen and (max-width: 800px) {
     .movie-card {
         max-width: 339px;
+        min-height: 257px;
         margin: 0;
+    }
+    .movie-card__container {
+        margin: 11px 13px 11px 14px;
     }
     .movie-card__picture {
         margin-bottom: 0;
         max-width: 339px;
-        height: 186px;
+        height: 190px;
     }
     .movies-list__item {
         padding: 189px 0 30px;
+    }
+    .movie-card__duration {
+        margin-top: 7px;
+
     }
 }
 @media screen and (max-width:400px) {

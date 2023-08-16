@@ -165,7 +165,9 @@
         font-size: 18px;
         line-height: 21.78px;
     }
-
+.aboutme__profile {
+    width: 100%;
+}
     .aboutme__name {
         margin-top: 43px;
         font-weight: 400;
@@ -187,7 +189,7 @@
     }
     .aboutme__photo {
         width: 292px;
-        height: 350px;
+        height: 352px;
     }
     .aboutme__link {
         margin-top: 40px;
