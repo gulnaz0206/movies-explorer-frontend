@@ -1,0 +1,137 @@
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    visibility: hidden;
+}
+
+.popup.active {
+    pointer-events: all;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s linear, visibility .1s linear;
+}
+
+.popup__close {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    top: 22px;
+    right: 22px;
+    background-image: url(../../images/close.svg);
+    background-color: transparent;
+    border: none;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    object-position: center;
+}
+.popup__close:hover {
+    opacity: .7;
+}
+.popup__container {
+    width: 55%;
+    height: 100%;
+    background-color: #fff;
+    padding: 50px;
+    position: absolute;
+    top: 0;
+}
+
+.popup__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 111px;
+}
+
+.popup__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.popup__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-decoration: none;
+    margin: 0 0 28px 0;
+    cursor: pointer;
+    color: #000;
+}
+.popup__link:hover {
+    opacity: .7;
+}
+.popup__link:last-child {
+    margin-bottom: 0;
+}
+.popup__link_active {
+    border-bottom: 2px solid black;
+    padding-bottom: 3px;
+    margin-bottom: 23px;
+}
+.popup__account {
+    width: 100px;
+    height: 32px;
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    color: black;
+    margin-top: 620px;
+    margin-bottom: 90px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.popup__account:hover {
+    opacity: .8;
+}
+
+@media (max-width: 768px) {
+    .popup {
+        display: flex;
+    }
+}
+@media (max-width: 520px) {
+    .popup__container {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
+    .popup__content {
+        margin-top: 94px;
+    }
+    .popup__link {
+        margin-bottom: 24px;
+        color: #000;
+    }
+    .popup__link_active {
+        padding-bottom: 7px;
+    }
+    .popup__account {
+        margin-top: 442px;
+    }
+    .popup__close {
+        top: 14px;
+        right: 12px;
+    }
+
+}
