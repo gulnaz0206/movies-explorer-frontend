@@ -7,16 +7,18 @@ function Promo() {
             <nav className="promo__navigation">
                 <ul className="promo__more">
                     <li className="promo__more-list">
-                        <button className="project__button" type="button">
-                            <a className="promo__button" href="#aboutProject">О проекте</a>
+                        <button className="promo__navigation-button" type="button">
+                            <a className="promo__navigation-button-link" href="#aboutProject">О проекте</a>
                         </button>
                     </li>
                     <li className="promo__more-list">
-                        <button className="project__button" type="button"><a className="promo__button" href="#tech">Технологии</a>
+                        <button className="promo__navigation-button" type="button">
+                            <a className="promo__navigation-button-link" href="#tech">Технологии</a>
                         </button>
                     </li>
                     <li className="promo__more-list">
-                        <button className="project__button" type="button"><a className="promo__button" href="#aboutme">Студент</a>
+                        <button className="promo__navigation-button" type="button">
+                            <a className="promo__navigation-button-link" href="#aboutme">Студент</a>
                         </button>
                         </li>
                 </ul>

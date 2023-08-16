@@ -6,7 +6,7 @@ import film from '../../../images/film.png';
 function MoviesCardList(props) {
     return (
         <>
-            <ul className="movies-list__item">
+            <ul className="movies__item">
                 <MoviesCard
                     title='33 слова о дизайне'
                     duration='1ч 47м'

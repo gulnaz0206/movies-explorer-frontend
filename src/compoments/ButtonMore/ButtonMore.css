@@ -1,4 +1,4 @@
-.more__button {
+.movies__button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,18 +14,18 @@
     cursor: pointer;
 }
 
-.more__button:hover {
+.movies__button:hover {
     opacity: .7;
 }
 
 @media screen and (max-width: 768px) {
-    .more__button {
+    .movies__button {
         margin-top: 15px;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .more__button {
+    .movies__button {
         width: 240px;
     }
 }

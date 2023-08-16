@@ -47,6 +47,9 @@
     }
 }
 @media screen and (max-width:400px) {
+    .checkbox {
+        padding-right: 2px;
+    } 
 
     .checkbox__input {
         height: 19px;

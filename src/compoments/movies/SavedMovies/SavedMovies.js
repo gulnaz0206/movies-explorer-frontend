@@ -1,6 +1,5 @@
 import MoviesCardList from '../MoviesCardList/MoviesCardList.js';
 import SearchForm from '../SearchForm/SearchForm.js';
-import './SavedMovies.css';
 import Footer from '../../Footer/Footer';
 import MovieHeader from '../../MovieHeader/MovieHeader.js';
 import Popup from "../../Popup/Popup.js";
@@ -14,7 +13,7 @@ function SavedMovies() {
             <MovieHeader onBurgerClick={() => setIsPopupOpened(true)} />
             <main>
                 <SearchForm />
-                <section className='saved-movies'>
+                <section className='movies'>
                     <MoviesCardList />
                 </section>
             </main>

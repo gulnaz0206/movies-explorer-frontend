@@ -162,6 +162,7 @@
         width: 260px;
         font-size: 12px;
         margin-bottom: 31px;
+         padding-top: 174px;
     }
     .profile__title {
         padding-bottom: 78px;
@@ -169,8 +170,5 @@
     .profile__button-exit {
         padding-top: 0px;
         font-size: 12px;
-    }
-    .profile__button {
-        padding-top: 171px;
     }
 }

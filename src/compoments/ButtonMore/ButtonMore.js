@@ -4,7 +4,7 @@ import './ButtonMore.css';
 function ButtonMore() {
     return (
         <>
-        <button type='button' className="more__button">Ещё</button>
+        <button type='button' className="movies__button">Ещё</button>
         </>
     );
 }

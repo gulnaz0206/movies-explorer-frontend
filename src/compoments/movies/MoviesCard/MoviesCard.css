@@ -81,7 +81,7 @@
     .movie-card__picture {
         max-width: 301px;
         height: 168px;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
     }
     .movie-card__title {
         font-size: 15px;
@@ -94,6 +94,6 @@
 
     }
         .movies-list__item {
-        padding: 48px 0 62px;
+        padding: 48px 0 53px;
     }
 }

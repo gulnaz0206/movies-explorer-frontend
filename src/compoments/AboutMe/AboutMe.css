@@ -1,7 +1,7 @@
 .aboutme {
     max-width: 1140px;
     margin: 0 auto;
-    padding: 108px 70px 0;
+    padding: 111px 70px 0;
 }
 
 .aboutme__title {
@@ -34,10 +34,10 @@
 
 .aboutme__name {
     font-size: 50px;
-    font-weight: 400px;
+    font-weight: 400;
     line-height: 58px;
     margin: 0;
-    letter-spacing: -1.6px;
+    letter-spacing: -2px;
 }
 
 .aboutme__profession {
@@ -45,7 +45,6 @@
     font-weight: 500;
     line-height: 20px;
     margin: 18px 0 26px;
-    letter-spacing: -.5px;
 }
 
 .aboutme__text {
@@ -53,13 +52,12 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 22px;
-    /* margin: 26px 10px 26px 0; */
     padding: 0;
-    margin: 0;
+    margin: 0 0 100px;
 }
 
 .aboutme__link {
-    margin-top: 99px;
+    /* margin-top: 99px; */
     max-width: 50px;
     color: #000;
     font-weight: 500;
@@ -80,9 +78,9 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .aboutme {
-        padding: 88px 50px 0;
+        padding: 90px 50px 0;
     }
 
     .aboutme__container {
@@ -115,18 +113,18 @@
         font-size: 12px;
         line-height: 18px;
         width: 364px;
-        /* margin-bottom: 87px; */
+        margin-bottom: 87px;
     }
 
     .aboutme__profile-photo {
         width: 255px;
     }
-    .aboutme__link {
+    /* .aboutme__link {
         margin-top: 87px;
-    }
+    } */
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 700px) {
     .aboutme {
         padding: 80px 30px 0;
     }
@@ -157,17 +155,13 @@
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 400px) {
     .aboutme {
-        padding: 63px 14px 0;
+        padding: 72px 14px 0;
     }
 
-    /* .aboutme__container {
-        margin-top: 61px;
-    } */
-
     .aboutme__title {
-        padding: 0 0 26px 0;
+        padding: 0 0 27px 0;
         font-size: 18px;
         line-height: 21.78px;
     }
@@ -176,15 +170,14 @@
         margin-top: 43px;
         font-weight: 400;
         font-size: 30px;
-        line-height: 36.31px;
-        letter-spacing: -1.1px;
+        line-height: normal;
+        letter-spacing: -1.2px;
     }
 
     .aboutme__profession {
         font-size: 11px;
         line-height: 16px;
-        font-weight: 500px
-        ;
+        font-weight: 500;
     }
     .aboutme__text {
         margin: 3px 0 0;

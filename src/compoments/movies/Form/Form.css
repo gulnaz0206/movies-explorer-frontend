@@ -147,9 +147,9 @@
     font-size: 14px;
     line-height: 17px;
     text-align: center;
-    margin-top: 162px;
+    margin-top: 165px;
 }
-.register__button {
+/* .register-button {
     width: 396px;
     height: 45px;
     margin: 0;
@@ -161,7 +161,7 @@
     text-align: center;
     margin-top: 97px;
     color: black;
-}
+} */
 .form__button:hover {
     opacity: .8;
 }

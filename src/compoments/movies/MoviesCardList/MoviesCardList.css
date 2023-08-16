@@ -1,4 +1,4 @@
-.movies-list__item {
+.movies__item {
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
@@ -9,22 +9,23 @@
     list-style: none;
     gap: 30px 24px;
 }
-
+/* 
 @media screen and (max-width: 1180px) {
     .movies-list__item {
         max-width: 710px;
         justify-content: center;
     }
-}
+} */
 
 @media screen and (max-width: 800px) {
-    .movies-list__item {
+    .movies__item {
         gap: 25px;
+        padding: 191px 0 30px;
 
     }
 }
 @media screen and (max-width: 440px) {
-    .movies-list__item {
+    .movies__item {
         padding-top: 43px;
         padding-bottom: 56px;
         gap: 5px;

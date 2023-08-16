@@ -1,4 +1,4 @@
-.search__container{
+.search {
     max-width: 1140px;
     margin: 0 auto;
 }
@@ -71,7 +71,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 100%;
-    padding: 4px 16px;
+    padding: 2px 12px 0 51px;
 }
 .search-form__input:focus {
     outline: none;
@@ -95,7 +95,7 @@
         display: flex;
     }
     .search-form {
-        width: 100%;
+        width: 96%;
         padding-left: 0;
         margin-top: 80px;
         margin-right: 0;

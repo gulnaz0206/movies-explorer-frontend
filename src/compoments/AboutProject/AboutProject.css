@@ -1,7 +1,7 @@
 .about-project {
     max-width: 1140px;
     margin: 0 auto;
-    padding: 110px 70px;
+    padding: 90px 0 109px;
 }
 
 .about-project__title {
@@ -75,7 +75,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 35px;
+    min-height: 37px;
     padding: 0;
     margin: 0 auto 14px;
 }
@@ -104,9 +104,9 @@
     justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .about-project {
-        padding: 61px 50px 89px;
+        padding: 90px 50px 90px;
     }
 
     .about-project__subtitle {
@@ -141,13 +141,19 @@
     }
 
     .about-project__scale {
-        margin-top: 93px;
+        margin-top: 92px;
+    }
+    .about-project__scale-backend {
+        width: 21%;
+    }
+    .about-project__item {
+        min-height: 36px;
     }
 }
 
 @media screen and (max-width: 550px) {
     .about-project {
-        padding: 66px 18px 70px;
+        padding: 56px 18px 70px;
     }
 
     .about-project__info-wrapper {
@@ -220,5 +226,8 @@
     .about-project__item_type_second-block {
         max-width: 184px;
         font-size: 11px;
+    }
+    .about-project__item {
+        margin-bottom: 9px;
     }
 }

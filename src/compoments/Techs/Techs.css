@@ -1,7 +1,8 @@
 .techs {
     max-width: 1140px;
     margin: 0 auto;
-    padding: 103px 70px;
+    padding: 102px 70px 99px;
+    background: #f5f5f5;
 }
 
 .techs__title {
@@ -60,19 +61,19 @@
     box-sizing: border-box;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .techs {
-        padding: 93px 50px;
+        padding: 94px 50px 90px;
     }
 
     .techs__container {
-        margin-top: 76px;
+        margin-top: 79px;
 
     }
 
     .techs__item {
         width: 84px;
-        /* height: 36px; */
+        height: 56px;
         font-size: 12px;
         line-height: 15px;
         box-sizing: border-box;
@@ -81,21 +82,21 @@
     .techs__title {
         font-size: 22px;
         line-height: 22px;
-        padding-bottom: 28px;
+        padding-bottom: 25px;
         letter-spacing: -.8px;
     }
 
     .techs__subtitle {
         font-size: 50px;
         line-height: normal;
-        letter-spacing: -1.2px;
+        letter-spacing: -2px;
     }
 
     .techs__text {
-        font-size: 11px;
-        line-height: 16px;
-        letter-spacing: -0.44px;
-        margin: 22px auto 0 auto;
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: -0.48px;
+        margin: 22px auto 0;
     }
 
     .techs__technologies {
@@ -123,13 +124,21 @@
     }
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 500px) {
     .techs {
-        padding: 67px 18px;
+        padding: 71px 18px;
     }
 
     .techs__title {
         font-size: 18px;
+        padding-bottom: 26px;
+    }
+
+    .techs__text {
+        letter-spacing: -0.44px;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 16px;
     }
 
     .techs__container {
@@ -138,11 +147,12 @@
 
     .techs__technologies {
         grid-template-columns: repeat(2, 84px);
-        margin: 50px auto 0 auto;
+        margin: 55px auto 0 auto;
         box-sizing: border-box;
     }
 
     .techs__subtitle {
         font-size: 30px;
+        letter-spacing: -1.2px;
     }
 }
