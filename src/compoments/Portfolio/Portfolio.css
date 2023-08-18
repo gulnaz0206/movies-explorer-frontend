@@ -1,0 +1,141 @@
+.portfolio {
+    max-width: 1140px;
+    width:calc(100% - 140px);
+    margin: 0 auto;
+    padding: 100px 0 106px;
+}
+
+.portfolio__title {
+    margin: 0;
+    color: #A0A0A0;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-bottom: 45px;
+    text-align: start;
+}
+
+.portfolio__container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.portfolio__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    align-items: center;
+    padding-bottom: 15px;
+
+}
+
+.portfolio__list:not(:last-child) {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.portfolio__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 50px;
+    letter-spacing: -1.2px;
+    height: 55px;
+    padding-right: 6px;
+    padding-top: 4px;
+}
+.portfolio__item:hover {
+    opacity: .7;
+}
+
+.portfolio__button {
+    padding: 0;
+    width: 31px;
+    height: 17px;
+    background-color: transparent;
+    background-image: url(../../images/button-arrow.svg);
+    background-repeat: no-repeat;
+    border: none;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .portfolio {
+        width: calc(100% - 100px);
+        padding: 91px 0 70px;
+        margin: 0 auto;
+    }
+    .portfolio__container {
+        gap: 15px;
+    }
+    .portfolio__title {
+        padding: 0;
+        margin-bottom: 43px;
+    }
+
+    .portfolio__list {
+        letter-spacing: -1.2px;
+        font-size: 28px;
+    }
+    
+    .portfolio__item {
+        font-size: 28px;
+        line-height: 44px;
+    }
+    .portfolio__button {
+        height: 16px;
+        margin-top: 6px;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .portfolio {
+        max-width: calc(100% - 28px);
+        width: 100%;
+        padding: 70px 14px 52px;
+        margin: 0;
+    }
+
+    .portfolio__title {
+        padding: 0;
+        font-size: 14px;
+        margin-bottom: 32px;
+    }
+
+    .portfolio__button {
+        width: 12px;
+            margin-top: 0px;
+    margin-bottom: 6px;
+    margin-right: 4px;
+
+    }
+
+    .portfolio__item {
+        width: 99%;
+        height: 47px;
+        font-size: 18px;
+        letter-spacing: -0.72px;
+        margin: 0;
+        padding: 0;
+    }
+    .portfolio__container {
+        gap: 11px;
+    }
+    .portfolio__list {
+        padding-bottom: 9px;
+    }
+}
