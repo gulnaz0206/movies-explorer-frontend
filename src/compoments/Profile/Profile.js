@@ -7,13 +7,19 @@ import useValidate from "../../utils/useValidate.js";
 import Popup from "../Popup/Popup.js";
 import { useState } from "react";
 
-function Profile ({ onSignOut }) {
+function Profile ({ onSignOut, onSubmit, isLoading }) {
     const [isPopupOpened, setIsPopupOpened] = useState(false);
     const currentUser = useContext(CurrentUserContext);
     const { values, setValues, errors, isValid, onChange } = useValidate();
+    const [isEdit, setEditStatus] = useState(false);
+    const [isCurrentUser, setUserDifference] = useState(true);
 
     // const profileButton = `${!isValid ? "profile__button-save" : "profile__button-inactive"}`;
-
+    function handleSubmit (event) {
+        event.preventDefault();
+        onSubmit(values);
+        setEditStatus(false);
+    }
     useEffect(() => {
         const { name, email } = currentUser;
         setValues({ 'name': name, 'email': email });
@@ -24,8 +30,8 @@ function Profile ({ onSignOut }) {
             <AuthedHeader onBurgerClick={() => setIsPopupOpened(true)} />
             <main>
                 <section className='profile'>
-                    <h1 className='profile__title'>Привет, {values.name}!</h1>
-                    <form className='profile__form'>
+                    <h1 className='profile__title'>Привет, {currentUser.name}!</h1>
+                    <form className='profile__form' onSubmit={handleSubmit}>
                         <fieldset className='profile__form-fieldset'>
                             <div className='profile__item'>
                                 <label className='profile__label' htmlFor='name'>Имя</label>
@@ -39,6 +45,8 @@ function Profile ({ onSignOut }) {
                                     minLength='2'
                                     maxLength='30'
                                     onChange={onChange}
+                                    pattern='^[a-zA-Zа-яА-ЯёЁ\\s\\-]+$'
+                                    disabled={!isEdit}
                                     required
                                 />
 
@@ -53,20 +61,31 @@ function Profile ({ onSignOut }) {
                                     value={values.email}
                                     placeholder='pochta@yandex.ru'
                                     onChange={onChange}
+                                    pattern="^[\w\-\.]+@([\w\-]+\.)+[\w\-]{2,4}$"
                                     required
+                                    disabled={!isEdit}
                                 />
 
                             </div>
                         </fieldset>
-                        <button className='profile__button' type='button'>
-                            Редактировать
-                        </button>
-                        <Link to="/" className='profile__button-exit' onClick={onSignOut}>
-                            Выйти из аккаунта
-                        </Link>
-                        {/* <button type='submit' className={profileButton}>
+                        {isEdit ? (
+                            <button
+                                type="submit"
+                                disabled={!isValid || isLoading || !isCurrentUser}
+                                className={`profile__button-save`}
+                            >
                                 Сохранить
-                                </button> */}
+                            </button>
+                        ) : (
+                            <>
+                                <button className='profile__button' type='button' onClick={() => setEditStatus(true)}>
+                                    Редактировать
+                                </button>
+                                <Link to="/" className='profile__button-exit' onClick={onSignOut}>
+                                    Выйти из аккаунта
+                                </Link>
+                            </>
+                        )}
                     </form>
                 </section>
             </main >

@@ -33,7 +33,7 @@ function App () {
     const currentPath = location.pathname;
 
     function viewError (err) {
-        setNotifyTextFromPopup(err.message || 'Ошибка авторизации. Проверьте вводимые данные, а также подключение к интернету.');
+        setNotifyTextFromPopup(err.message || 'Ошибка. Проверьте вводимые данные, а также подключение к интернету.');
         console.log(err);
     }
 
@@ -79,6 +79,20 @@ function App () {
             .finally(() => setIsLoading(false))
     }
 
+    function handleChangeProfile ({ name, email }) {
+        setIsLoading(true);
+        mainApi._handleEditProfile({ name, email })
+            .then((data) => {
+                if (data.error) {
+                    throw new Error(data.error)
+                }
+                setNotifyTextFromPopup(`Данные успешно обновлены!`);
+                setСurrentUser(data);
+            })
+            .catch((err) => viewError(err))
+            .finally(() => setIsLoading(false))
+
+    }
     useEffect(() => {
         // moviesApi.getAllMovies()
         //     .then((allMovies) => {
@@ -136,7 +150,7 @@ function App () {
                         <Route path="/" element={<Main isLogged={isLogged} />} />
                         <Route path="/movies" element={<Movies currentUser={currentUser} />} />
                         <Route path="/saved-movies" element={<SavedMovies />} />
-                        <Route path="/profile" element={<Profile onSignOut={handleSignOut} />} />
+                        <Route path="/profile" element={<Profile isLoading={isLoading} onSubmit={handleChangeProfile} onSignOut={handleSignOut} />} />
                         <Route path="/" element={<Main />} />
                         <Route path="/signin" element={<Login onSubmit={handleLogin} />} />
                         <Route path="/signup" element={<Register onSubmit={handleRegister} />} />

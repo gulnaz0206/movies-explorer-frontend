@@ -110,6 +110,10 @@
 .profile__button-save:hover {
   opacity: 0.8;
 }
+.profile__button-save:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
 .profile__button-inactive {
   width: 410px;
   height: 45px;
@@ -132,7 +136,7 @@
     padding-top: 3px;
   }
   .profile__button {
-    padding-top: 178px;
+    margin-top: 178px;
   }
   .profile__title {
     padding-bottom: 94px;
@@ -163,7 +167,7 @@
     width: 260px;
     font-size: 12px;
     margin-bottom: 31px;
-    padding-top: 174px;
+    margin-top: 174px;
   }
   .profile__title {
     padding-bottom: 78px;

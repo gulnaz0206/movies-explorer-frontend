@@ -34,6 +34,9 @@ class MainApi {
         .then((jsonError) => {
           return { error: jsonError.message };
         })
+    }
+    else if (res.status === 500) {
+      return { error: "Ошибка на стороне сервера" };
     } else {
       return Promise.reject(`Ошибка: ${res.status}`);
     }
