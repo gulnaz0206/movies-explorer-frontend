@@ -1,0 +1,119 @@
+.notify-popup {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: visibility 0.1s, opacity 0.1s linear, top 0.1s;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.notify-popup__container {
+  border-radius: 10px;
+  position: relative;
+  max-width: 430px;
+  background-color: #fff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 680px) {
+  .notify-popup__container {
+    max-width: 382px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .notify-popup__container {
+    max-width: 282px;
+  }
+}
+.notify-popup__container_notify {
+  width: 70%;
+}
+.notify-popup__notify-title {
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.notify-popup__close {
+  position: absolute;
+  top: -28px;
+  right: 0px;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url('../../images/close-btn.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: opacity 0.5s;
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+}
+.notify-popup__close:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 680px) {
+  .notify-popup__close {
+    top: -36px;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+}
+.notify-popup_opened {
+  visibility: visible;
+  opacity: 1;
+  top: 0%;
+}
+
+.notify-popup__description {
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+}
+
+.notify-popup_type_notify {
+  display: flex;
+}
+.notify-popup__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 32px;
+  margin: 0 0 10px;
+  padding: 0;
+  background-color: #2be080;
+  border-radius: 3px;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  cursor: pointer;
+}
+.notify-popup__btn:hover {
+  background-color: #0cc964;
+}
