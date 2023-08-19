@@ -7,7 +7,7 @@ function SearchForm ({
     setIsChecked,
     setSearchText,
     isLoading,
-    localStorageEnabled
+    isViewSearchHistory
 }) {
     const [isValid, setIsValid] = useState(false);
 
@@ -35,7 +35,7 @@ function SearchForm ({
                         type="text"
                         placeholder="Фильм"
                         required={true}
-                        defaultValue={localStorageEnabled ? localStorage.getItem("search") || "" : ""}
+                        defaultValue={isViewSearchHistory ? localStorage.getItem("search") || "" : ""}
                     />
                     <button
                         className="search-form__button"
@@ -45,7 +45,7 @@ function SearchForm ({
                 </div>
                 <FilterCheckbox
                     setIsChecked={setIsChecked}
-                    localStorageEnabled={localStorageEnabled}
+                    isViewSearchHistory={isViewSearchHistory}
                 />
             </form>
 

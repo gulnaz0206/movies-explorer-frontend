@@ -30,7 +30,7 @@ function Profile ({ onSignOut, onSubmit, isLoading }) {
             <AuthedHeader onBurgerClick={() => setIsPopupOpened(true)} />
             <main>
                 <section className='profile'>
-                    <h1 className='profile__title'>Привет, {currentUser.name}!</h1>
+                    <h1 className='profile__title'>Привет, {values.name}!</h1>
                     <form className='profile__form' onSubmit={handleSubmit}>
                         <fieldset className='profile__form-fieldset'>
                             <div className='profile__item'>

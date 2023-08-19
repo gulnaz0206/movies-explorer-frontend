@@ -1,7 +1,7 @@
 export const BEAT_FILM_URL = 'https://api.nomoreparties.co/beatfilm-movies';
 export const BEAT_FILM_URL_SERVER = 'https://api.nomoreparties.co';
-// export const BASE_URL = 'https://******.nomoredomains.rocks';
-export const BASE_URL = 'http://localhost:3000';
+export const BASE_URL = 'https://api-movie.nomoredomains.xyz';
+// export const BASE_URL = 'http://localhost:3000';
 
 export const SHORT_MOVIE = 40;
 export const MAX_MOVIES_ON_PAGE = 12;

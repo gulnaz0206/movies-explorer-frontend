@@ -3,22 +3,13 @@ import Form from '../Form/Form';
 import useValidate from "../../utils/useValidate.js";
 import { useNavigate } from "react-router-dom";
 
-function Register ({ onSubmit, isLogged }) {
+function Register ({ onSubmit }) {
     const { values, errors, isValid, onChange } = useValidate();
-    const navigate = useNavigate();
 
     const handleFormSubmit = (evt) => {
         evt.preventDefault();
         onSubmit(values);
     }
-
-    useEffect(() => {
-        if (isLogged) {
-            setTimeout(() => {
-                navigate('/', { replace: true });
-            }, 100)
-        }
-    }, [isLogged]);
 
     return (
         <Form

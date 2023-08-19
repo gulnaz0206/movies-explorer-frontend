@@ -26,16 +26,16 @@ function SavedMovies ({
             <main>
                 <SearchForm
                     isLoading={isLoading}
-                    setIsChecked={setIsChecked}
+                    isViewSearchHistory={true}
                     setSearchText={setSearchText}
-                    isSavedMoviesCmpnt={true}
+                    setIsChecked={setIsChecked}
                 />
                 <section className='movies'>
                     <MoviesCardList
-                        movies={moviesAll}
+                        moviesSaved={moviesSaved}
                         isLoading={isLoading}
                         onDislike={onDislike}
-                        moviesSaved={moviesSaved}
+                        movies={moviesAll}
                     />
                 </section>
             </main>

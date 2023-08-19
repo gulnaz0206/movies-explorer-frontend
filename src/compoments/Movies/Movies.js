@@ -18,7 +18,7 @@ function Movies ({
     onLike,
     onDislike }) {
     const [movies, setMovies] = useState([]);
-    const invisibleFilms = moviesAll.slice(movies.length);
+    const hiddenMovies = moviesAll.slice(movies.length);
     const [addedCardsQty, setLoadMoreCount] = useState(null);
     const [cardsForPage, setCountCardsPerLoad] = useState(calcQtyCards().cardsForPage);
 
@@ -35,9 +35,8 @@ function Movies ({
         return () => window.removeEventListener('resize', handleChangeSizeWindow);
     }, []);
 
-    // обработка нажатия на кнопку 'еще'
-    function handleClickButtonMore () {
-        setMovies([...movies, ...invisibleFilms.slice(0, addedCardsQty)])
+    function onClickMore () {
+        setMovies([...movies, ...hiddenMovies.slice(0, addedCardsQty)])
     }
 
     function handleChangeSizeWindow () {
@@ -55,14 +54,14 @@ function Movies ({
                     isLoading={isLoading}
                     setIsChecked={setIsChecked}
                     setSearchText={setSearchText}
-                    localStorageEnabled={true}
+                    isViewSearchHistory={true}
                 />
                 <section className="movies">
                     <MoviesCardList
                         movies={movies}
                         isLoading={isLoading}
-                        invisibleFilms={invisibleFilms}
-                        handleClickButtonMore={handleClickButtonMore}
+                        hiddenMovies={hiddenMovies}
+                        onClickMore={onClickMore}
                         moviesSaved={moviesSaved}
                         onLike={onLike}
                         onDislike={onDislike}

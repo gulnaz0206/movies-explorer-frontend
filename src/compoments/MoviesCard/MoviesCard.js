@@ -41,7 +41,7 @@ function MoviesCard ({
         </div>
         <button type="button" className={`${image.length ? 'movie-card__delete-btn' : liked ? 'movie-card__save' : 'movie-card__no-save'}`} onClick={liked ? handleClickDislike : handleClickLike} />
       </div>
-      <img className="movie-card__picture" src={imageUrl} alt={nameRU} onClick={() => window.open(trailerLink, '_blank')} />
+      <a href={trailerLink}><img className="movie-card__picture" src={imageUrl} alt={nameRU} /></a>
     </li>
   );
 }

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import './FilterCheckbox.css';
 
-function FilterCheckbox ({ setIsChecked, localStorageEnabled }) {
+function FilterCheckbox ({ setIsChecked, isViewSearchHistory }) {
     const isCheckedLocalStorage = localStorage.getItem("filterCheckbox");
     const [isToggleOn, setIsToggleOn] = useState(
-        localStorageEnabled
-            ? isCheckedLocalStorage === "true"
+        isViewSearchHistory
+            ? isCheckedLocalStorage
             : false);
 
     function handleChange (e) {

@@ -12,7 +12,7 @@ class MoviesApi {
     return res.json()
   }
 
-  getAllMovies () {
+  loadMoviesAll () {
     return fetch(this._baseUrl, {
       method: 'GET',
       headers: {

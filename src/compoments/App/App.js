@@ -14,7 +14,7 @@ import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
 import './App.css';
 import moviesApi from "../../utils/MoviesApi";
-import { BEAT_FILM_URL_SERVER, SHORT_MOVIE, TEXT_NOTIFY_ERROR_FETCH } from "../../utils/constants";
+import { SHORT_MOVIE } from "../../utils/constants";
 import NotifyPopup from "../NotifyPopup/NotifyPopup";
 import mainApi from "../../utils/MainApi";
 import Popup from "../Popup/Popup";
@@ -71,9 +71,6 @@ function App () {
             })
             .catch((err) => viewError(err))
             .finally(() => setIsLoading(false))
-
-
-
     }
 
     function handleLogin (email, password) {
@@ -177,10 +174,7 @@ function App () {
         }
         try {
             setIsLoading(true);
-            const moviesLocalStorage = localStorage.getItem("movies");
-            const movies = moviesLocalStorage
-                ? JSON.parse(moviesLocalStorage)
-                : await moviesApi.loadMoviesAll();
+            const movies = await moviesApi.loadMoviesAll();
             localStorage.setItem("movies", JSON.stringify(movies));
 
             const filteredMoviesAll = searchMoviesInArray(movies, searchTextMoviesAll, isCheckboxShortsMoviesAll);
