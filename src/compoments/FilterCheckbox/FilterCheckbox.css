@@ -11,6 +11,7 @@
   font-weight: 400;
   line-height: 18px;
   margin-left: 12px;
+  cursor: default;
 }
 .checkbox__input {
   position: relative;

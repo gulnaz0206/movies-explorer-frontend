@@ -97,15 +97,15 @@ class MainApi {
   }
 
   _handleAddMovie (movie) {
-    const { id, nameRU, nameEN, country, director, duration, year, description, image, trailerLink, } = movie
+    const { movieId, nameRU, nameEN, country, director, duration, year, description, image, trailerLink, thumbnail } = movie;
     return fetch(`${this._urlServer}/movies`, {
       method: 'POST',
       headers: this._getHeaders(),
       credentials: 'include',
       body: JSON.stringify({
-        movieId: id,
-        image: 'https://api.nomoreparties.co' + image.url,
-        thumbnail: 'https://api.nomoreparties.co' + image.formats.thumbnail.url,
+        image,
+        movieId,
+        thumbnail,
         country,
         director,
         duration,

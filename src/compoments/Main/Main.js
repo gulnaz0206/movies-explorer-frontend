@@ -7,10 +7,10 @@ import Promo from '../Promo/Promo';
 import Footer from '../Footer/Footer';
 import AuthedHeader from '../AuthedHeader/AuthedHeader';
 
-function Main ({ isLogged }) {
+function Main ({ isLogged, setIsPopupOpened }) {
     return (
         <>
-            {isLogged ? (<AuthedHeader />) : (<HeaderPage />)}
+            {isLogged ? (<AuthedHeader setIsPopupOpened={setIsPopupOpened} />) : (<HeaderPage />)}
             <main>
                 <Promo />
                 <AboutProject />

@@ -88,7 +88,7 @@
   font-weight: 500;
   max-width: 410px;
   margin: 0 auto;
-  padding-top: 30px;
+  margin-top: 30px;
   cursor: pointer;
 }
 .profile__button-exit:hover {
@@ -118,7 +118,6 @@
   width: 410px;
   height: 45px;
   background-color: #f8f8f8;
-  color: #c2c2c2;
   font-weight: 500;
   font-size: 14px;
   line-height: 17px;
@@ -126,6 +125,10 @@
   border-radius: 3px;
   border: none;
   cursor: pointer;
+  margin: 15px 0 0 0;
+}
+.profile__button-inactive:hover {
+  opacity: 0.8;
 }
 @media screen and (max-width: 800px) {
   .profile {
@@ -142,9 +145,16 @@
     padding-bottom: 94px;
   }
   .profile__button-exit {
-    padding-top: 32px;
+    margin-top: 32px;
   }
 }
+@media screen and (max-width: 420px) {
+  .profile__button-inactive,
+  .profile__button-save {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .profile {
     padding-top: 70px;
@@ -173,7 +183,7 @@
     padding-bottom: 78px;
   }
   .profile__button-exit {
-    padding-top: 0px;
+    margin-top: 0px;
     font-size: 12px;
   }
 }

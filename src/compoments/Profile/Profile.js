@@ -69,13 +69,22 @@ function Profile ({ onSignOut, onSubmit, isLoading }) {
                             </div>
                         </fieldset>
                         {isEdit ? (
-                            <button
-                                type="submit"
-                                disabled={!isValid || isLoading || !isCurrentUser}
-                                className={`profile__button-save`}
-                            >
-                                Сохранить
-                            </button>
+                            <>
+                                <button
+                                    type="submit"
+                                    disabled={!isValid || isLoading || !isCurrentUser}
+                                    className={`profile__button-save`}
+                                >
+                                    Сохранить
+                                </button>
+                                <button
+                                    type="button"
+                                    className={`profile__button-inactive`}
+                                    onClick={() => setEditStatus(false)}
+                                >
+                                    Отмена
+                                </button>
+                            </>
                         ) : (
                             <>
                                 <button className='profile__button' type='button' onClick={() => setEditStatus(true)}>

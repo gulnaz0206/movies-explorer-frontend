@@ -3,22 +3,43 @@ import SearchForm from '../SearchForm/SearchForm.js';
 import Footer from '../Footer/Footer';
 import AuthedHeader from '../AuthedHeader/AuthedHeader.js';
 import Popup from "../Popup/Popup.js";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 
-function SavedMovies () {
-    const [isPopupOpened, setIsPopupOpened] = useState(false);
+function SavedMovies ({
+    setIsPopupOpened,
+    moviesAll,
+    setIsChecked,
+    setSearchText,
+    moviesSaved,
+    isLoading,
+    onDislike }) {
+
+    useEffect(() => {
+        setIsChecked(false);
+        setSearchText("");
+    }, [])
+
     return (
         <>
-            <AuthedHeader onBurgerClick={() => setIsPopupOpened(true)} />
+            <AuthedHeader setIsPopupOpened={setIsPopupOpened} />
             <main>
-                <SearchForm />
+                <SearchForm
+                    isLoading={isLoading}
+                    setIsChecked={setIsChecked}
+                    setSearchText={setSearchText}
+                    isSavedMoviesCmpnt={true}
+                />
                 <section className='movies'>
-                    <MoviesCardList />
+                    <MoviesCardList
+                        movies={moviesAll}
+                        isLoading={isLoading}
+                        onDislike={onDislike}
+                        moviesSaved={moviesSaved}
+                    />
                 </section>
             </main>
             <Footer />
-            <Popup isPopupOpened={isPopupOpened} onClosePopup={() => setIsPopupOpened(false)} />
         </>
     );
 }
