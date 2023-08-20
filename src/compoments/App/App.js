@@ -84,8 +84,8 @@ function App () {
         setIsLoading(true);
         mainApi.logout()
             .then(() => {
-                // setSearchTextMovies('')
-                // localStorage.clear();
+                setSearchTextMoviesAll('')
+                localStorage.clear();
                 setIsLogged(false);
                 setNotifyTextFromPopup(`Вы успешно вышли!`);
                 setСurrentUser({ email: '', name: '' });
@@ -132,6 +132,11 @@ function App () {
                         const { email, name } = data;
                         setСurrentUser({ email, name });
                         navigate(currentUrl, { replace: true });
+                    } else {
+                        setSearchTextMoviesAll('')
+                        localStorage.clear();
+                        setIsLogged(false);
+                        setСurrentUser({ email: '', name: '' });
                     }
                 };
                 checkTokenAsync();
@@ -174,7 +179,10 @@ function App () {
         }
         try {
             setIsLoading(true);
-            const movies = await moviesApi.loadMoviesAll();
+            const moviesLocalStorage = localStorage.getItem("movies");
+            const movies = moviesLocalStorage
+                ? JSON.parse(moviesLocalStorage)
+                : await moviesApi.loadMoviesAll();
             localStorage.setItem("movies", JSON.stringify(movies));
 
             const filteredMoviesAll = searchMoviesInArray(movies, searchTextMoviesAll, isCheckboxShortsMoviesAll);

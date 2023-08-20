@@ -39,7 +39,7 @@ function MoviesCardList ({
                             />)
                     })}
                 </ul>
-            ) : !isLoading ? <h3 className="movies-card-list__title">Список фильмов пуст</h3> : ""}
+            ) : (<h3 className="movies__title">Ничего не найдено</h3>)}
             {hiddenMovies?.length ?
                 <ButtonMore onClickButtonMore={onClickMore} /> : ""}
         </>

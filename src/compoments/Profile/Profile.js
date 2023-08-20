@@ -3,14 +3,14 @@ import AuthedHeader from '../AuthedHeader/AuthedHeader';
 import './Profile.css';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 import { Link } from 'react-router-dom';
-import useValidate from "../../utils/useValidate.js";
+import { useFormWithValidation } from "../../hooks/useFormWithValidation";
 import Popup from "../Popup/Popup.js";
 import { useState } from "react";
 
 function Profile ({ onSignOut, onSubmit, isLoading }) {
     const [isPopupOpened, setIsPopupOpened] = useState(false);
     const currentUser = useContext(CurrentUserContext);
-    const { values, setValues, errors, isValid, onChange } = useValidate();
+    const { values, setValues, handleChange, errors, isValid, resetForm } = useFormWithValidation();
     const [isEdit, setEditStatus] = useState(false);
     const [isCurrentUser, setUserDifference] = useState(true);
 
@@ -19,6 +19,9 @@ function Profile ({ onSignOut, onSubmit, isLoading }) {
         event.preventDefault();
         onSubmit(values);
         setEditStatus(false);
+    }
+    function comparison () {
+        return values.name === currentUser.name && values.email === currentUser.email
     }
     useEffect(() => {
         const { name, email } = currentUser;
@@ -30,7 +33,7 @@ function Profile ({ onSignOut, onSubmit, isLoading }) {
             <AuthedHeader onBurgerClick={() => setIsPopupOpened(true)} />
             <main>
                 <section className='profile'>
-                    <h1 className='profile__title'>Привет, {values.name}!</h1>
+                    <h1 className='profile__title'>Привет, {currentUser.name}!</h1>
                     <form className='profile__form' onSubmit={handleSubmit}>
                         <fieldset className='profile__form-fieldset'>
                             <div className='profile__item'>
@@ -44,7 +47,7 @@ function Profile ({ onSignOut, onSubmit, isLoading }) {
                                     placeholder='Имя'
                                     minLength='2'
                                     maxLength='30'
-                                    onChange={onChange}
+                                    onChange={handleChange}
                                     pattern='^[a-zA-Zа-яА-ЯёЁ\\s\\-]+$'
                                     disabled={!isEdit}
                                     required
@@ -60,7 +63,7 @@ function Profile ({ onSignOut, onSubmit, isLoading }) {
                                     type='email'
                                     value={values.email}
                                     placeholder='pochta@yandex.ru'
-                                    onChange={onChange}
+                                    onChange={handleChange}
                                     pattern="^[\w\-\.]+@([\w\-]+\.)+[\w\-]{2,4}$"
                                     required
                                     disabled={!isEdit}
@@ -72,7 +75,7 @@ function Profile ({ onSignOut, onSubmit, isLoading }) {
                             <>
                                 <button
                                     type="submit"
-                                    disabled={!isValid || isLoading || !isCurrentUser}
+                                    disabled={!isValid || isLoading || comparison()}
                                     className={`profile__button-save`}
                                 >
                                     Сохранить

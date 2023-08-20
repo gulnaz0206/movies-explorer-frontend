@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import './SearchForm.css';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 import finfIcon from '../../images/search-icon.svg';
@@ -10,6 +10,7 @@ function SearchForm ({
     isViewSearchHistory
 }) {
     const [isValid, setIsValid] = useState(false);
+    const ref = useRef();
 
     function handleChange (event) {
         setIsValid(event.target.validity.valid);
@@ -31,6 +32,7 @@ function SearchForm ({
                     <img className="search__find" src={finfIcon} alt="Лупа" />
                     <input
                         className="search-form__input"
+                        ref={ref}
                         id="search"
                         type="text"
                         placeholder="Фильм"
@@ -40,7 +42,7 @@ function SearchForm ({
                     <button
                         className="search-form__button"
                         type="submit"
-                        disabled={isLoading ? true : !isValid}
+                        disabled={isLoading}
                     />
                 </div>
                 <FilterCheckbox

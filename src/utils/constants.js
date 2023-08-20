@@ -10,7 +10,7 @@ export const MSECOND_VIEW_NOTIFY = 1000;
 export const TEXT_NOTIFY_ERROR_FETCH = 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз';
 
 // размеры экрана и количество отображаемых карточек
-export const LARGE_WIDTH = 1158;
+export const LARGE_WIDTH = 1140;
 export const MIDDLE_WIDTH = 728;
 export const SMALL_WIDTH = 320;
 export const CARDS_FOR_PAGE_LARGE = 12;

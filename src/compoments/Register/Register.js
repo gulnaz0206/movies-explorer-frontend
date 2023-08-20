@@ -1,16 +1,24 @@
 import React, { useEffect } from "react";
 import Form from '../Form/Form';
-import useValidate from "../../utils/useValidate.js";
 import { useNavigate } from "react-router-dom";
+import { useFormWithValidation } from "../../hooks/useFormWithValidation";
 
-function Register ({ onSubmit }) {
-    const { values, errors, isValid, onChange } = useValidate();
+function Register ({ onSubmit, isLogged }) {
+    // const { values, errors, isValid, onChange } = useValidate();
+    const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation();
+    const navigate = useNavigate();
 
     const handleFormSubmit = (evt) => {
         evt.preventDefault();
         onSubmit(values);
     }
-
+    useEffect(() => {
+        if (isLogged) {
+            setTimeout(() => {
+                navigate('/', { replace: true });
+            }, 100)
+        }
+    }, [isLogged]);
     return (
         <Form
             isValid={isValid}
@@ -33,7 +41,7 @@ function Register ({ onSubmit }) {
                     minLength='6'
                     maxLength='30'
                     value={values.name || ""}
-                    onChange={onChange}
+                    onChange={handleChange}
                 />
                 <span className="form__input-error">{errors.name}</span>
             </label>
@@ -49,7 +57,7 @@ function Register ({ onSubmit }) {
                     maxLength='30'
                     pattern="^[\w\-\.]+@([\w\-]+\.)+[\w\-]{2,4}$"
                     value={values.email || ""}
-                    onChange={onChange}
+                    onChange={handleChange}
                 />
                 <span className="form__input-error">{errors.email}</span>
             </label>
@@ -64,7 +72,7 @@ function Register ({ onSubmit }) {
                     minLength='8'
                     maxLength='30'
                     value={values.password || ""}
-                    onChange={onChange}
+                    onChange={handleChange}
                 />
                 <span className="form__input-error">{errors.password}</span>
             </label>

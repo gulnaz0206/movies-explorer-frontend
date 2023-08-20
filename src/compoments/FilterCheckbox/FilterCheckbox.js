@@ -5,9 +5,8 @@ function FilterCheckbox ({ setIsChecked, isViewSearchHistory }) {
     const isCheckedLocalStorage = localStorage.getItem("filterCheckbox");
     const [isToggleOn, setIsToggleOn] = useState(
         isViewSearchHistory
-            ? isCheckedLocalStorage
+            ? isCheckedLocalStorage === "true"
             : false);
-
     function handleChange (e) {
         const isChecked = e.target.checked;
         setIsChecked(isChecked);

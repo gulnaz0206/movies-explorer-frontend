@@ -1,16 +1,23 @@
 import React, { useEffect } from "react";
 import Form from '../Form/Form';
-import useValidate from "../../utils/useValidate.js";
+import { useFormWithValidation } from "../../hooks/useFormWithValidation";
 import { useNavigate } from "react-router-dom";
 
-function Login ({ onSubmit }) {
-    const { values, errors, isValid, onChange } = useValidate();
+function Login ({ onSubmit, isLogged }) {
+    const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation();
+    const navigate = useNavigate();
 
     const handleFormSubmit = (evt) => {
         evt.preventDefault();
         onSubmit(values);
     }
-
+    useEffect(() => {
+        if (isLogged) {
+            setTimeout(() => {
+                navigate('/', { replace: true });
+            }, 100)
+        }
+    }, [isLogged]);
     return (
         <Form
             isValid={isValid}
@@ -34,7 +41,7 @@ function Login ({ onSubmit }) {
                     maxLength='30'
                     pattern="^[\w\-\.]+@([\w\-]+\.)+[\w\-]{2,4}$"
                     value={values.email || ""}
-                    onChange={onChange}
+                    onChange={handleChange}
                 />
                 <span className="form__input-error">{errors.email}</span>
             </label>
@@ -49,7 +56,7 @@ function Login ({ onSubmit }) {
                     minLength='8'
                     maxLength='30'
                     value={values.password || ""}
-                    onChange={onChange}
+                    onChange={handleChange}
                 />
                 <span className="form__input-error">{errors.password}</span>
             </label>
