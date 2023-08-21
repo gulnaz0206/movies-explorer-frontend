@@ -3,4 +3,4 @@
 
 Ссылка на PR: https://github.com/gulnaz0206/movies-explorer-frontend/pull/3
 
-Ссылка проекта на сервере: https://movie.nomoredomains.xyz/
+Ссылка на сервер: https://movie.nomoredomains.xyz/
