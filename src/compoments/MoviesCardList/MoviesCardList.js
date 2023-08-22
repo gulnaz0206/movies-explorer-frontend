@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import './MoviesCardList.css';
 import MoviesCard from "../MoviesCard/MoviesCard";
 import ButtonMore from "../ButtonMore/ButtonMore";
+import { useLocation } from "react-router-dom";
 
 function MoviesCardList ({
     movies,
@@ -10,9 +11,12 @@ function MoviesCardList ({
     onClickMore,
     moviesSaved,
     onLike,
-    onDislike
+    onDislike,
+    searchText
 }) {
     const [savedMoviesArrId, setSavedMoviesArrId] = useState([]);
+    const location = useLocation();
+    const currentUrl = location.pathname;
 
     useEffect(() => {
         let ids = moviesSaved.map((movie) => movie.movieId);
@@ -23,6 +27,23 @@ function MoviesCardList ({
     function checkIsSavedMovies (movie) {
         const id = movie.id ? movie.id : movie.movieId;
         return savedMoviesArrId.includes(id)
+    }
+    function textNotifyIsEmptyMovies () {
+        if (searchText === "" && currentUrl === '/movies') {
+            return 'Введите в строку поиска запрос для получения списка фильмов';
+        }
+        else if (searchText !== "" && currentUrl === '/movies') {
+            return 'Ничего не найдено';
+        }
+        else if (searchText === "" && currentUrl === '/saved-movies') {
+            return 'Список фильмов, добавленных в избранное, пуст';
+        }
+        else if (searchText !== "" && currentUrl === '/saved-movies') {
+            return 'Ничего не найдено';
+        }
+        else {
+            return 'Список фильмов пуст';
+        }
     }
     return (
         <>
@@ -39,7 +60,7 @@ function MoviesCardList ({
                             />)
                     })}
                 </ul>
-            ) : (<h3 className="movies__title">Ничего не найдено</h3>)}
+            ) : (<h3 className="movies__title">{textNotifyIsEmptyMovies()}</h3>)}
             {hiddenMovies?.length ?
                 <ButtonMore onClickButtonMore={onClickMore} /> : ""}
         </>

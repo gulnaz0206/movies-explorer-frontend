@@ -7,7 +7,8 @@ function SearchForm ({
     setIsChecked,
     setSearchText,
     isLoading,
-    isViewSearchHistory
+    isViewSearchHistory,
+    setNotifyTextFromPopup
 }) {
     const [isValid, setIsValid] = useState(false);
     const ref = useRef();
@@ -17,9 +18,13 @@ function SearchForm ({
     }
 
     function handleSubmit (event) {
-        event.preventDefault();
         const searchText = event.target.elements['search'].value;
-        setSearchText(searchText);
+        event.preventDefault();
+        if (searchText) {
+            setSearchText(searchText);
+        } else {
+            setNotifyTextFromPopup("Нужно ввести ключевое слово")
+        }
     }
     return (
         <section className="search">
@@ -27,6 +32,7 @@ function SearchForm ({
                 className="search-form"
                 onChange={handleChange}
                 onSubmit={handleSubmit}
+                noValidate
             >
                 <div className="search__input">
                     <img className="search__find" src={finfIcon} alt="Лупа" />

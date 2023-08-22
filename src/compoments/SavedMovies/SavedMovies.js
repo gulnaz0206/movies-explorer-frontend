@@ -13,7 +13,10 @@ function SavedMovies ({
     setSearchText,
     moviesSaved,
     isLoading,
-    onDislike }) {
+    onDislike,
+    setNotifyTextFromPopup,
+    searchText
+}) {
 
     useEffect(() => {
         setIsChecked(false);
@@ -26,9 +29,10 @@ function SavedMovies ({
             <main>
                 <SearchForm
                     isLoading={isLoading}
-                    isViewSearchHistory={true}
+                    isViewSearchHistory={false}
                     setSearchText={setSearchText}
                     setIsChecked={setIsChecked}
+                    setNotifyTextFromPopup={setNotifyTextFromPopup}
                 />
                 <section className='movies'>
                     <MoviesCardList
@@ -36,6 +40,7 @@ function SavedMovies ({
                         isLoading={isLoading}
                         onDislike={onDislike}
                         movies={moviesAll}
+                        searchText={searchText}
                     />
                 </section>
             </main>

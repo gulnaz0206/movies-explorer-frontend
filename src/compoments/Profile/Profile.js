@@ -23,6 +23,11 @@ function Profile ({ onSignOut, onSubmit, isLoading }) {
     function comparison () {
         return values.name === currentUser.name && values.email === currentUser.email
     }
+    function cancelEdit () {
+        const { name, email } = currentUser;
+        resetForm({ name, email })
+        setEditStatus(false)
+    }
     useEffect(() => {
         const { name, email } = currentUser;
         setValues({ 'name': name, 'email': email });
@@ -48,8 +53,7 @@ function Profile ({ onSignOut, onSubmit, isLoading }) {
                                     minLength='2'
                                     maxLength='30'
                                     onChange={handleChange}
-                                    pattern='^[a-zA-Zа-яА-ЯёЁ\\s\\-]+$'
-                                    disabled={!isEdit}
+                                    disabled={!isEdit || isLoading}
                                     required
                                 />
 
@@ -66,7 +70,7 @@ function Profile ({ onSignOut, onSubmit, isLoading }) {
                                     onChange={handleChange}
                                     pattern="^[\w\-\.]+@([\w\-]+\.)+[\w\-]{2,4}$"
                                     required
-                                    disabled={!isEdit}
+                                    disabled={!isEdit || isLoading}
                                 />
 
                             </div>
@@ -83,7 +87,7 @@ function Profile ({ onSignOut, onSubmit, isLoading }) {
                                 <button
                                     type="button"
                                     className={`profile__button-inactive`}
-                                    onClick={() => setEditStatus(false)}
+                                    onClick={cancelEdit}
                                 >
                                     Отмена
                                 </button>

@@ -100,7 +100,8 @@ function App () {
         mainApi._handleEditProfile({ name, email })
             .then((data) => {
                 if (data.error) {
-                    throw new Error(data.error)
+                    clearUserSettings();
+                    throw new Error(data.error);
                 }
                 setNotifyTextFromPopup(`Данные успешно обновлены!`);
                 setСurrentUser(data);
@@ -119,6 +120,12 @@ function App () {
     useEffect(() => {
         !isOpenPopupNotify && setNotifyTextFromPopup('')
     }, [isOpenPopupNotify]);
+    function clearUserSettings () {
+        setSearchTextMoviesAll('')
+        localStorage.clear();
+        setIsLogged(false);
+        setСurrentUser({ email: '', name: '' });
+    }
 
     //проверка токена
     useEffect(() => {
@@ -133,10 +140,7 @@ function App () {
                         setСurrentUser({ email, name });
                         navigate(currentUrl, { replace: true });
                     } else {
-                        setSearchTextMoviesAll('')
-                        localStorage.clear();
-                        setIsLogged(false);
-                        setСurrentUser({ email: '', name: '' });
+                        clearUserSettings()
                     }
                 };
                 checkTokenAsync();
@@ -235,6 +239,10 @@ function App () {
     async function handleLike (movie) {
         try {
             const data = await mainApi.addMovie(movie);
+            if (data.error) {
+                clearUserSettings();
+                throw new Error(data.error);
+            }
             const changedMoviesSaved = [...moviesSaved, data];
             setMoviesSaved(changedMoviesSaved)
             localStorage.setItem("moviesSaved", JSON.stringify(changedMoviesSaved));
@@ -248,6 +256,10 @@ function App () {
         const findedMovie = moviesSaved.find(film => film.movieId === movieId);
         try {
             const data = await mainApi.removeMovie(findedMovie._id);
+            if (data.error) {
+                clearUserSettings();
+                throw new Error(data.error);
+            }
             const changedMoviesSaved = moviesSaved.filter((film) => film._id !== data._id);
             setMoviesSaved(changedMoviesSaved)
             localStorage.setItem("moviesSaved", JSON.stringify(changedMoviesSaved));
@@ -285,6 +297,8 @@ function App () {
                                 isLoading={isLoading}
                                 onLike={handleLike}
                                 onDislike={handleDislike}
+                                setNotifyTextFromPopup={setNotifyTextFromPopup}
+                                searchText={searchTextMoviesAll}
                             />
                         } />
                         <Route path="/saved-movies" element={
@@ -298,6 +312,8 @@ function App () {
                                 moviesSaved={moviesSaved}
                                 isLoading={isLoading}
                                 onDislike={handleDislike}
+                                setNotifyTextFromPopup={setNotifyTextFromPopup}
+                                searchText={searchTextMoviesSaved}
                             />
                         } />
                         <Route path="/profile" element={

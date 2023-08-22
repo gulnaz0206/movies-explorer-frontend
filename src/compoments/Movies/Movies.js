@@ -16,7 +16,9 @@ function Movies ({
     setIsChecked,
     setSearchText,
     onLike,
-    onDislike }) {
+    onDislike,
+    setNotifyTextFromPopup,
+    searchText }) {
     const [movies, setMovies] = useState([]);
     const hiddenMovies = moviesAll.slice(movies.length);
     const [addedCardsQty, setLoadMoreCount] = useState(null);
@@ -55,6 +57,7 @@ function Movies ({
                     setIsChecked={setIsChecked}
                     setSearchText={setSearchText}
                     isViewSearchHistory={true}
+                    setNotifyTextFromPopup={setNotifyTextFromPopup}
                 />
                 <section className="movies">
                     <MoviesCardList
@@ -65,6 +68,7 @@ function Movies ({
                         moviesSaved={moviesSaved}
                         onLike={onLike}
                         onDislike={onDislike}
+                        searchText={searchText}
                     />
                 </section>
             </main>
